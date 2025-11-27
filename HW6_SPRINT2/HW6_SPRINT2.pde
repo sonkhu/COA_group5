@@ -6,6 +6,9 @@ mush_dead ch2;
 DoraCopter doraCopter;
 DoraBell doraBell;
 
+snoopy k;
+snoopytie t;
+snoopydead s;
 
 void setup() {
  size(1600,1200);
@@ -15,9 +18,17 @@ void setup() {
  doraCopter = new DoraCopter(800,300,300);
  doraBell = new DoraBell(120,120,120); 
  
+ k = new snoopy(800,800,5);
+ t = new snoopytie(600,950,10);
+ s = new snoopydead(1300,200,13);
+ 
  ch1.show();
  ch2.show();
  
  doraCopter.show();
  doraBell.show();  
+ 
+ k.drawsnoopy();
+ t.drawNecktie();
+ s.drawSnoopyDead();
 }
